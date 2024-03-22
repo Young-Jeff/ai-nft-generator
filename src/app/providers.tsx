@@ -7,11 +7,6 @@ import {
   getDefaultConfig,
 } from "@rainbow-me/rainbowkit";
 import {
-  argentWallet,
-  trustWallet,
-  ledgerWallet,
-} from "@rainbow-me/rainbowkit/wallets";
-import {
   arbitrum,
   base,
   mainnet,
@@ -29,13 +24,7 @@ const { wallets } = getDefaultWallets();
 const config = getDefaultConfig({
   appName: "RainbowKit demo",
   projectId: "YOUR_PROJECT_ID",
-  wallets: [
-    ...wallets,
-    {
-      groupName: "Other",
-      wallets: [argentWallet, trustWallet, ledgerWallet],
-    },
-  ],
+  wallets: wallets,
   chains: [
     mainnet,
     polygon,
